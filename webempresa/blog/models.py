@@ -13,7 +13,7 @@ class Category(models.Model):
     verbose_name_plural = "categorías"
     def __str__(self):
         return self.name
- class Post(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=200,
     verbose_name="Título")
     content = models.TextField(
@@ -30,8 +30,8 @@ class Category(models.Model):
     verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True,
     verbose_name="Fecha de edición")
- class Meta:
-    verbose_name = "entrada"
-    verbose_name_plural = "entradas"
-    def __str__(self):
-        return self.title
+    class Meta:
+        verbose_name = "entrada"
+        verbose_name_plural = "entradas"
+        def __str__(self):
+            return self.title
